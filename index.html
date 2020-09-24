@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Hover in/Hover out</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+  </script>
+  <script>
+    $(document).ready(function() {
+      $('img').hover(function() {
+          $(this).attr('temp', $(this).attr('src'));
+          $(this).attr('src', $(this).attr('data-alt-src'));
+        },
+        function() {
+          $(this).attr('src', $(this).attr('temp'));
+        });
+    });
+  </script>
+</head>
+
+<body>
+  <div id="wrapper">
+    <div class="row">
+      <img src="img/HTML1.png" data-alt-src="img/HTML2.png" alt="HtML1">
+      <img src="img/CSS1.png" data-alt-src="img/CSS2.jpg" alt="CSS1">
+      <img src="img/jQuery1.png" data-alt-src="img/jQuery2.png" alt="jQuery1">
+      <img src="img/JavaScript1.png" data-alt-src="img/JavaScript2.png" alt="JavaScript1">
+    </div>
+    <div class="row">
+      <img src="img/Python1.png" data-alt-src="img/Python2.png" alt="Python1">
+      <img src="img/Ruby1.png" data-alt-src="img/Ruby2.png" alt="/Ruby1">
+      <img src="img/Angular1.png" data-alt-src="img/Angular2.png" alt="Angular1">
+      <img src="img/MongoDB1.jpg" data-alt-src="img/MongoDB2.png" alt="MongoDB1">
+    </div>
+  </div>
+</body>
+
+</html>
